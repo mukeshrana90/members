@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
+import Fade from 'react-reveal/Fade';
 import membersList from '../dummy-data/users.json'
+
+// Components
 import MemberDetails from './MemberDetails'
 import AddMember from './AddMember'
 
@@ -15,7 +18,9 @@ export default class Members extends Component {
                 return (
                     <li key={member.index} onClick={(e)=> {
                         this.handleClick(member)
-                    }} className={this.state.toggleClass?'active':''} >{member.name}</li>
+                    }} className={this.state.toggleClass?'active':''} >
+                        <Fade bottom>{member.name}</Fade>
+                    </li>
                 )
             })
         )        

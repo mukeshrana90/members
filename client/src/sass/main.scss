@@ -18,11 +18,12 @@ body {
     background: #f9f9f9;
     width: 210px;
     padding: 20px 15px;
+    overflow-y: auto; 
     .usersList {
         list-style: none;
 
         li {
-            padding: 5px 0;
+            padding: 20px 0;
             cursor: pointer;
             &:hover, &.active {
                 color: #0093e2;
@@ -88,4 +89,13 @@ body {
        transform: translate(-50%,-50%);
         color: #fff;
     }
+}
+.addMemberWrapper {
+    position: absolute;
+    right: 30px;
+    bottom: 70px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 20px;
+    z-index: 1;
 }
