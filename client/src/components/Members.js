@@ -8,31 +8,30 @@ import AddMember from './AddMember'
 
 export default class Members extends Component {
     state = {
-        selected : null,
-        toggleClass: false
+        selected: null,             
     }
 
-    displayMembers() {  
+    displayMembers() {
         return (
-            membersList.map((member)=> {                
+            membersList.map((member) => {
                 return (
-                    <li key={member.index} onClick={(e)=> {
-                        this.handleClick(member)
-                    }} className={this.state.toggleClass?'active':''} >
+                    <li key={member.index} 
+                        onClick={(e) => {this.handleClick(member)}}                                                 
+                    >
                         <Fade bottom>{member.name}</Fade>
                     </li>
                 )
             })
-        )        
+        )
     }
 
     handleClick(member) {
-        
         this.setState({
-            selected: member,
-            toggleClass: !this.state.toggleClass
+            selected: member,         
         })
+         
     }
+
 
     render() {
         return (
@@ -43,9 +42,7 @@ export default class Members extends Component {
                 <div className="mainContent">
                     <MemberDetails member={this.state.selected} />
                 </div>
-
                 <AddMember />
-
             </div>
         )
     }

@@ -7,12 +7,13 @@ export default class AddMember extends Component {
         super(props);
         this.state = {
             email: "",
+            name: ""
         }
         this.onChangeHandle = this.onChangeHandle.bind(this);
     }
-    onChangeHandle(e) {
+    onChangeHandle(e) {        
         this.setState({
-            [e.target.name]: e.target.value
+           [e.target.name] : e.target.value
         })
     }
     render() {
